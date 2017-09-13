@@ -7,20 +7,20 @@ sass = require('gulp-sass');
 gulp.task('watch', ['sass'], function() {
 
 browserSync.init({
-server: './src'
+server: '.'
 });
 
-gulp.watch('src/scss/**/*.scss', ['sass'], browserSync.reload);
-gulp.watch('src/*.html').on('change', browserSync.reload);
-gulp.watch('src/js/**/*.js', browserSync.reload);
+gulp.watch('./scss/**/*.scss', ['sass'], browserSync.reload);
+gulp.watch('./*.html').on('change', browserSync.reload);
+gulp.watch('./js/**/*.js', browserSync.reload);
 
 });
 
 // Compile Sass into CSS & inject into browsers
 gulp.task('sass', function() {
-return gulp.src('src/scss/**/*.scss')
+return gulp.src('./scss/**/*.scss')
 .pipe(sass().on('error', sass.logError))
-.pipe(gulp.dest('src/css'))
+.pipe(gulp.dest('./css'))
 .pipe(browserSync.stream());
 });
 
