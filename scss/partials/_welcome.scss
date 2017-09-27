@@ -1,0 +1,40 @@
+.welcome {
+  background-image: url(../img/header-bg.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: $fw-n;
+    color: $dark-blue;
+    line-height: 2;
+    text-align: center;
+
+    span {
+      @include sans-serif($fs: 5.5rem, $color: $accent);
+      display: block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 60%;
+      height: 1px;
+      background: $dark-blue;
+    }
+
+    &::before {
+      margin: 0 auto 2em;      
+    }
+
+    &::after {
+      margin: 2em auto 0;      
+    }
+
+  }
+}
