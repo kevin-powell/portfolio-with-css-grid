@@ -1,0 +1,50 @@
+
+.about-me {
+  @extend %container;
+  @extend %clearfix;
+  
+  margin-top: 3em;
+
+}
+
+.about-img {
+  max-height: 25em;
+  
+
+  @media (min-width: 42em) {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+.about-title {
+  margin-bottom: .25em;  
+}
+
+.about-subtitle {
+  margin: .5em 0;
+}
+
+@supports (display: grid) {
+  .about-me {
+    display: grid;
+    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+  }
+
+  .about-img {
+    grid-column: port / img;
+    grid-row: 1 / 2;
+  }
+
+  .about-title {
+    grid-column: name / port;
+    grid-row: 1 / 2;
+    align-self: end;
+  }
+
+  .about-subtitle,
+  .about-text {
+    grid-column: port / port;
+  }
+
+}
