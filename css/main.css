@@ -540,3 +540,71 @@ h2 {
     font-size: 5rem; }
   .featured .portfolio-desc {
     display: block; } }
+
+.contact {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 5em 0; }
+  .contact h1 {
+    text-align: center; }
+
+form {
+  display: flex;
+  flex-direction: column; }
+
+label {
+  display: block;
+  margin-top: 1em;
+  color: #606060; }
+
+input,
+textarea {
+  box-sizing: border-box;
+  display: block;
+  padding: .75em;
+  width: 100%;
+  background: #fbfbfc;
+  border: 1px solid #E8E9EB;
+  font-size: 1.2rem; }
+
+.button {
+  display: inline-block;
+  width: auto;
+  margin-top: 1em;
+  margin-left: auto;
+  background: #03AFC2;
+  border: none;
+  font-size: 2.5rem;
+  letter-spacing: 0.15em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  padding: .5em 1.5em; }
+
+footer {
+  background: #223843;
+  padding: 5em 0;
+  text-align: center; }
+
+.social-icons {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 15em;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.75em auto 4em; }
+
+.social-icon {
+  width: 25%;
+  height: 25%; }
+
+.copyright::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 4em auto;
+  width: 25%; }

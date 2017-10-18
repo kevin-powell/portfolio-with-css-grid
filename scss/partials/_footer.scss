@@ -1,0 +1,28 @@
+footer {
+  background: $dark-blue;
+  padding: 5em 0;
+  text-align: center;
+}
+
+.social-icons {
+  @include container($max-width: 15em);
+  display: flex;
+  justify-content: space-between;
+  margin: 1.75em auto 4em;
+}
+
+.social-icon {
+  width: 25%;
+  height: 25%;
+}
+
+.copyright {
+  &::before {
+    content: '';
+    display: block;
+    height: 1px;
+    background: rgba($white, .15);
+    margin: 4em auto;
+    width: 25%;
+  }
+}
