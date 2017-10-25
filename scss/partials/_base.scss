@@ -4,7 +4,12 @@ body {
   line-height: 1.6;
   background: $white;
   font-size: .875rem;  
+
+  @include mq {
+    font-size: 1.125rem;
+  }
 }
+
 
 img {
   max-width: 100%;
@@ -20,9 +25,16 @@ h1 {
   line-height: 1;
   font-size: 3.125rem;
 
+  @include mq {
+    font-size: 4.25rem;
+  }
 }
 
 h2 {
   @include sans-serif($fs: 2rem);
+
+  @include mq {
+    font-size: 3rem;
+  }
 }
 

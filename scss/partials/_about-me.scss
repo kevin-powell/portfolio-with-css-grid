@@ -29,11 +29,16 @@
   .about-me {
     display: grid;
     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    grid-column-gap: .5em;
   }
 
   .about-img {
     grid-column: port / img;
     grid-row: 1 / 2;
+
+    @include mq {
+      grid-row: 1 / 4;
+    }
   }
 
   .about-title {
@@ -45,6 +50,18 @@
   .about-subtitle,
   .about-text {
     grid-column: port / port;
+
+    @include mq {
+      grid-column: image-end / port-end;
+    }
+  }
+
+  .about-subtitle {
+    grid-row: 2 / 3;
+  }
+
+  .about-text {
+    grid-row: 3 / 4;
   }
 
 }

@@ -72,6 +72,10 @@
   .portfolio-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @include mq {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   
   .portfolio-item.featured {
