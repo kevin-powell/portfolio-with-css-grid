@@ -399,6 +399,7 @@ nav {
   bottom: 0;
   left: 0;
   right: 20%;
+  max-width: 800px;
   z-index: 10;
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -468,26 +469,29 @@ nav a {
 .close-icon {
   display: none; }
 
-.nav-is-open nav {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0); }
-
-.nav-is-open .container-all {
-  -webkit-transform: translateX(80%);
-  -ms-transform: translateX(80%);
-  transform: translateX(80%); }
-
-.nav-is-open .hamburger {
-  display: none; }
-
-.nav-is-open .close-icon {
-  display: block; }
-
-.nav-is-open .menu-button {
-  -webkit-transform: translateX(-70%);
-  -ms-transform: translateX(-70%);
-  transform: translateX(-70%); }
+.nav-is-open {
+  overflow-x: hidden; }
+  .nav-is-open nav {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  .nav-is-open .container-all {
+    -webkit-transform: translateX(80%);
+    -ms-transform: translateX(80%);
+    transform: translateX(80%); }
+    @media (min-width: 800px) {
+      .nav-is-open .container-all {
+        -webkit-transform: translateX(800px);
+        -ms-transform: translateX(800px);
+        transform: translateX(800px); } }
+  .nav-is-open .hamburger {
+    display: none; }
+  .nav-is-open .close-icon {
+    display: block; }
+  .nav-is-open .menu-button {
+    -webkit-transform: translateX(-70%);
+    -ms-transform: translateX(-70%);
+    transform: translateX(-70%); }
 
 .container-all {
   -webkit-transition: -webkit-transform ease-out 250ms;
