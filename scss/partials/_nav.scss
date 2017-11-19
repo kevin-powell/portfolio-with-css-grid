@@ -15,7 +15,6 @@ nav {
   bottom: 0;
   left: 0;
   right: 20%;
-  max-width: 800px;
   z-index: 10;
 
   transform: translateX(-100%);
@@ -63,21 +62,12 @@ nav a {
 }
 
 .nav-is-open {
-
-  overflow-x: hidden;
-
   nav {
     transform: translateX(0);
   }
 
   .container-all {
     transform: translateX(80%);
-
-    @media (min-width: 800px) {
-      transform: translateX(800px);
-    }
-
-
   }
 
   .hamburger {
