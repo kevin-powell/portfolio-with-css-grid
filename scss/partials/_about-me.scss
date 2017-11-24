@@ -52,16 +52,8 @@
     grid-column: port / port;
 
     @include mq {
-      grid-column: image-end / port-end;
+      grid-column: img-end / port-end;
     }
-  }
-
-  .about-subtitle {
-    grid-row: 2 / 3;
-  }
-
-  .about-text {
-    grid-row: 3 / 4;
   }
 
 }
