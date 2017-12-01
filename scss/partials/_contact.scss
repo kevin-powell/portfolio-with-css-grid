@@ -14,12 +14,14 @@ form {
   @supports (display: grid) {
     @include mq {
       display: grid;
-      grid-column: 1fr 1fr;
+
+      grid-template-columns: 50% 50%; 
+
       grid-column-gap: 1em;
       grid-template-areas:
         "name     email"
-        "message message"
-        "   .      button";
+        "message  message"
+        ".        button";
 
         .name {
           grid-area: name;

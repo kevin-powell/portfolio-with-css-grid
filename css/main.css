@@ -858,9 +858,11 @@ form {
     @media (min-width: 50em) {
       form {
         display: grid;
-        grid-column: 1fr 1fr;
+        grid-template-columns: 50% 50%;
         grid-column-gap: 1em;
+
         grid-template-areas: "name     email" "message message" "   .      button"; }
+
         form .name {
           grid-area: name; }
         form .email {
