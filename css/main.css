@@ -65,6 +65,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -93,6 +94,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -226,6 +228,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -261,6 +264,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -382,8 +386,13 @@ h2 {
   left: 3em;
   background: transparent;
   border: 0;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  -o-transition: transform ease-in-out 250ms;
   transition: transform ease-in-out 250ms;
-  cursor: pointer; }
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+  cursor: pointer;
+  outline: none; }
 
 nav {
   position: absolute;
@@ -392,18 +401,52 @@ nav {
   left: 0;
   right: 20%;
   z-index: 10;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
-  transition: transform ease-out 250ms; }
+  -webkit-transition: -webkit-transform ease-out 250ms;
+  transition: -webkit-transform ease-out 250ms;
+  -o-transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms; }
+
+nav li, nav a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%; }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 100vh;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
-  align-items: strech;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   background: #03AFC2; }
 
 nav li {
@@ -412,10 +455,9 @@ nav li {
     border-bottom: 1px solid #223843; }
 
 nav li:hover {
-  background: rgba(34, 56, 67, 0.5); }
+  background: rgba(0, 0, 0, 0.2); }
 
 nav a {
-  display: inline-block;
   font-size: 4rem;
   letter-spacing: 0.15em;
   color: #223843;
@@ -423,35 +465,57 @@ nav a {
   line-height: 1;
   font-family: "Six Caps", sans-serif;
   font-weight: 400;
-  text-decoration: none;
-  padding: calc(100vh/8) 0;
-  line-height: 0;
-  width: 100%; }
+  text-decoration: none; }
 
 .close-icon {
   display: none; }
 
-.nav-is-open {
-  height: 100vh;
-  overflow-y: hidden; }
-  .nav-is-open nav {
-    transform: translateX(0); }
-  .nav-is-open .container-all {
-    transform: translateX(80%); }
-  .nav-is-open .hamburger {
-    display: none; }
-  .nav-is-open .close-icon {
-    display: block; }
-  .nav-is-open .menu-button {
-    transform: translateX(-70%); }
+.nav-is-open nav {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0); }
+
+.nav-is-open .container-all {
+  -webkit-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%); }
+
+.nav-is-open .hamburger {
+  display: none; }
+
+.nav-is-open .close-icon {
+  display: block; }
+
+.nav-is-open .menu-button {
+  -webkit-transform: translateX(-70%);
+  -ms-transform: translateX(-70%);
+  transform: translateX(-70%); }
+
+.container-all {
+  -webkit-transition: -webkit-transform ease-out 250ms;
+  transition: -webkit-transform ease-out 250ms;
+  -o-transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms;
+  transition: transform ease-out 250ms, -webkit-transform ease-out 250ms; }
+
+
 
 .welcome {
   background-image: url(../img/header-bg.png);
   background-size: cover;
   background-position: center;
   height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: relative; }
   .welcome h1 {
@@ -487,6 +551,9 @@ nav a {
       margin: 2em auto 0; }
 
 .intro {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   color: rgba(255, 255, 255, 0.7); }
   .intro h2 {
@@ -507,12 +574,23 @@ nav a {
   background: #223843;
   padding: 2.5em 5vw;
   text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .intro-left img,
 .intro-right img {
+  -o-object-fit: cover;
   object-fit: cover;
   min-height: 100%;
   min-width: 100%;
@@ -556,6 +634,8 @@ nav a {
   .about-title {
     grid-column: name / port;
     grid-row: 1 / 2;
+    -webkit-align-self: end;
+    -ms-flex-item-align: end;
     align-self: end; }
   .about-subtitle,
   .about-text {
@@ -575,7 +655,12 @@ nav a {
   padding: 5em 0; }
 
 .portfolio-items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
@@ -584,8 +669,11 @@ nav a {
 .portfolio-item {
   position: relative;
   overflow: hidden;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 20rem;
+  -ms-flex: 1 1 20rem;
   flex: 1 1 20rem; }
-  .portfolio-item img {
+  .portfolio-item .portfolio-image {
     display: block;
     width: 100%; }
   .portfolio-item figcaption {
@@ -598,8 +686,17 @@ nav a {
     background: rgba(3, 175, 194, 0.75);
     color: #FFFFFF;
     text-align: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-transition: top ease-in-out 250ms;
+    -o-transition: top ease-in-out 250ms;
     transition: top ease-in-out 250ms; }
   .portfolio-item:hover figcaption,
   .portfolio-item:focus figcaption {
@@ -619,6 +716,8 @@ nav a {
   font-size: 1.1rem;
   text-decoration: none;
   border-bottom: 3px solid #FFFFFF;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
   align-self: flex-start; }
   .portfolio-link::after {
     content: url(../img/arrow-white.svg);
@@ -642,6 +741,101 @@ nav a {
   .featured .portfolio-desc {
     display: block; } }
 
+.portfolio-modal {
+  position: fixed;
+  z-index: 10;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  background: white;
+  box-shadow: 0 0 0 3em rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none; }
+  .portfolio-modal.is-open {
+    display: block; }
+
+.modal-close {
+  background: white;
+  position: fixed;
+  left: 1em;
+  top: 1em;
+  border: 0;
+  width: 2em;
+  height: 2em;
+  padding: 4px 0 0;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+.portfolio-header {
+  text-align: left;
+  padding: 5em 0;
+  margin-bottom: 2em;
+  background-size: cover;
+  background-position: center; }
+
+.header-one {
+  background-image: url(../img/portfolio-01.jpg); }
+
+.header-two {
+  background-image: url(../img/portfolio-02.jpg); }
+
+.portfolio-title-box {
+  background: rgba(3, 175, 194, 0.75);
+  padding: 3em 0 3em 3em;
+  color: white;
+  width: 70%; }
+  .portfolio-title-box .portfolio-title {
+    font-size: 3.5rem;
+    display: inline-block; }
+    .portfolio-title-box .portfolio-title::after {
+      content: '';
+      display: block;
+      height: 1px;
+      margin: .5em 0;
+      background: white;
+      width: 100%; }
+
+.portfolio-subtitle {
+  font-size: 1rem; }
+
+.portfolio-content {
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 2em; }
+
+.portfolio-full-width {
+  width: 100vw;
+  max-width: initial;
+  margin: 2em calc(50% - 50vw);
+  height: 20vh;
+  object-fit: cover; }
+
+@media (min-width: 50em) {
+  .portfolio-pull-left {
+    width: 65%;
+    float: left;
+    margin-right: 2em; }
+  .portfolio-pull-right {
+    width: 65%;
+    float: right;
+    margin-left: 2em; } }
+
+@keyframes modalIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes modalOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .contact {
   width: 90%;
   margin: 0 auto;
@@ -651,7 +845,14 @@ nav a {
     text-align: center; }
 
 form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column; }
   @supports (display: grid) {
     @media (min-width: 50em) {
@@ -659,7 +860,9 @@ form {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-column-gap: 1em;
-        grid-template-areas: "name     email" "message  message" ".        button"; }
+
+        grid-template-areas: "name     email" "message message" "   .      button"; }
+
         form .name {
           grid-area: name; }
         form .email {
@@ -678,6 +881,7 @@ label {
 
 input,
 textarea {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   padding: .75em;
@@ -686,6 +890,10 @@ textarea {
   background: #fbfbfc;
   border: 1px solid #E8E9EB;
   font-size: 1.2rem; }
+
+textarea {
+  resize: vertical;
+  outline: none; }
 
 .button {
   display: inline-block;
@@ -713,7 +921,13 @@ footer {
   width: 90%;
   margin: 0 auto;
   max-width: 15em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 1.75em auto 4em; }
 

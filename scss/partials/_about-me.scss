@@ -9,7 +9,7 @@
 
 .about-img {
   max-height: 25em;
-  
+  border-radius: 50%;
 
   @media (min-width: 42em) {
     float: left;
@@ -52,9 +52,10 @@
     grid-column: port / port;
 
     @include mq {
-      grid-column: image-end / port-end;
+      grid-column: img-end / port-end;
     }
   }
+
 
   .about-subtitle {
     grid-row: 2 / 3;
@@ -64,4 +65,3 @@
     grid-row: 3 / 4;
   }
 
-}

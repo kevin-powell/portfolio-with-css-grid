@@ -14,7 +14,9 @@ form {
   @supports (display: grid) {
     @include mq {
       display: grid;
+
       grid-template-columns: 50% 50%; 
+
       grid-column-gap: 1em;
       grid-template-areas:
         "name     email"
@@ -59,6 +61,11 @@ textarea {
   background: lighten($light-gray, 7%);
   border: 1px solid $light-gray;
   font-size: 1.2rem;
+}
+
+textarea {
+  resize: vertical;
+  outline: none;
 }
 
 .button {
