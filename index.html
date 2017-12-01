@@ -19,7 +19,7 @@
   </nav>
 
   <div class="container-all">
-    <div class="welcome">
+    <div class="welcome" id="home">
       <button class="menu-button">
           <svg class="hamburger" x="0px" y="0px"
           viewBox="0 0 30 17" height="17" width="30" >
@@ -58,7 +58,7 @@
       </div>
     </section>
 
-    <section class="about-me">
+    <section class="about-me" id="about">
       <img class="about-img" src="img/joe-portfolio.png" alt="A picture of Joe Portfolio">
       <h1 class="about-title">Joe Portfolio</h1>
       <h2 class="about-subtitle">Designer & Developer</h2>
@@ -68,33 +68,90 @@
       </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h1>My Work </h1>
       <div class="portfolio-items">
 
         <!-- Portfolio item 1 -->
         <figure class="portfolio-item">
-          <img src="img/portfolio-01.jpg" alt="portfolio item">
+          <img class="portfolio-image" src="img/portfolio-01.jpg" alt="portfolio item">
           <figcaption>
             <h2 class="portfolio-title">Project Name</h2>
             <p class="portfolio-desc">A short description could go right here</p>
             <a href="#" class="portfolio-link">More info</a>
           </figcaption>
+          
+          <!-- Portfolio modal 1 -->
+          <div class="portfolio-modal">
+            <button class="modal-close">
+              <svg x="0px" y="0px"
+                viewBox="0 0 30 17" height="17" width="30">
+                <g transform="translate(-15 -15)">
+                <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3 
+                35.8,16.5 37,17.7 	"/>
+                </g>
+            </svg>
+           </button>
+            <div class="portfolio-header header-one">
+              <div class="portfolio-title-box">
+                <h2 class="portfolio-title">Project Name</h2>    
+                <p class="portfolio-subtitle">Subtitle goes here</p>
+              </div>
+            </div> <!-- / portfolio-header -->
+            <div class="portfolio-content">
+               <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+               <img class="portfolio-full-width" src="img/portfolio-01.jpg" alt="an image"> 
+               <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+               <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+               <img class="portfolio-pull-left" src="img/portfolio-01.jpg" alt="an image"> 
+               <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+               <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+               <img class="portfolio-pull-right" src="img/portfolio-01.jpg" alt="an image"> 
+              </div>
+          </div>
+          <!-- /modal -->
         </figure>
 
         <!-- Portfolio item 2 -->
         <figure class="portfolio-item">
-            <img src="img/portfolio-02.jpg" alt="portfolio item">
+            <img class="portfolio-image" src="img/portfolio-02.jpg" alt="portfolio item">
             <figcaption>
               <h2 class="portfolio-title">Project Name</h2>
               <p class="portfolio-desc">A short description could go right here</p>
               <a href="#" class="portfolio-link">More info</a>
             </figcaption>
+            <div class="portfolio-modal">
+                <button class="modal-close">
+                  <svg x="0px" y="0px"
+                    viewBox="0 0 30 17" height="17" width="30">
+                    <g transform="translate(-15 -15)">
+                    <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3 
+                    35.8,16.5 37,17.7 	"/>
+                    </g>
+                </svg>
+               </button>
+                <div class="portfolio-header header-two">
+                  <div class="portfolio-title-box">
+                    <h2 class="portfolio-title">Project Name 2</h2>    
+                    <p class="portfolio-subtitle">Subtitle goes here</p>
+                  </div>
+                </div> <!-- / portfolio-header -->
+                <div class="portfolio-content">
+                   <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+                   <img class="portfolio-full-width" src="img/portfolio-02.jpg" alt="an image"> 
+                   <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+                   <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+                   <img class="portfolio-pull-left" src="img/portfolio-02.jpg" alt="an image"> 
+                   <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+                   <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+                   <img class="portfolio-pull-right" src="img/portfolio-02.jpg" alt="an image"> 
+                  </div>
+              </div>
           </figure>
 
           <!-- Portfolio item 3 -->
         <figure class="portfolio-item">
-            <img src="img/portfolio-03.jpg" alt="portfolio item">
+            <img class="portfolio-image" src="img/portfolio-03.jpg" alt="portfolio item">
             <figcaption>
               <h2 class="portfolio-title">Project Name</h2>
               <p class="portfolio-desc">A short description could go right here</p>
@@ -104,7 +161,7 @@
 
           <!-- Portfolio item 4 -->
         <figure class="portfolio-item">
-            <img src="img/portfolio-04.jpg" alt="portfolio item">
+            <img class="portfolio-image" src="img/portfolio-04.jpg" alt="portfolio item">
             <figcaption>
               <h2 class="portfolio-title">Project Name</h2>
               <p class="portfolio-desc">A short description could go right here</p>
@@ -114,7 +171,7 @@
 
           <!-- Portfolio item 5 -->
         <figure class="portfolio-item featured">
-            <img src="img/portfolio-05.jpg" alt="portfolio item">
+            <img class="portfolio-image" src="img/portfolio-05.jpg" alt="portfolio item">
             <figcaption>
               <h2 class="portfolio-title">Project Name</h2>
               <p class="portfolio-desc">A short description could go right here</p>
@@ -126,7 +183,7 @@
 
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <h1>Contact me</h1>
       <form action="">
         <label class="name" class="name">Name:
@@ -158,6 +215,7 @@
     </footer>
   </div>
   <script src="js/nav.js"></script>
-
+  <script src="js/modal.js"></script>
+  
 </body> 
 </html>

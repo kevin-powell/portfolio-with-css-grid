@@ -3,7 +3,8 @@ body {
   font-family: $ff-s;
   line-height: 1.6;
   background: $white;
-  font-size: .875rem;  
+  font-size: .875rem;
+  overflow-x: hidden;  
 
   @include mq {
     font-size: 1.125rem;
