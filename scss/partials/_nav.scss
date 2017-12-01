@@ -19,6 +19,10 @@ nav {
 
   transform: translateX(-100%);
   transition: transform ease-out 250ms;
+  
+  @include mq {
+    right: 80%;
+  }
 }
 
 nav {
@@ -74,6 +78,10 @@ nav a {
 
   .container-all {
     transform: translateX(80%);
+    
+    @include mq {
+            transform: translateX(20%);
+        }
   }
 
   .hamburger {
