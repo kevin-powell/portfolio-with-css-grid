@@ -14,7 +14,7 @@ portfolioContainer.addEventListener('click', e => {
   const modalOpen = _ => {
     modal.classList.add('is-open')
     modal.style.animation = 'modalIn 500ms forwards'
-    document.body.style.overflowY = 'hidden'
+    //document.body.style.overflowY = 'hidden'
   }
 
   const modalClose = _ => {
@@ -25,7 +25,7 @@ portfolioContainer.addEventListener('click', e => {
   closeButton.addEventListener('click', _ => {
     modal.style.animation = 'modalOut 500ms forwards'
     modal.addEventListener('animationend', modalClose)
-    document.body.style.overflowY = 'scroll'
+    //document.body.style.overflowY = 'scroll'
   })
 
   document.addEventListener('keydown', e => {
