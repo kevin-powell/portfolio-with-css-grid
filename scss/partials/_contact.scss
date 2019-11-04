@@ -17,7 +17,7 @@ form {
 
       grid-template-columns: 50% 50%; 
 
-      grid-column-gap: 1em;
+      column-gap: 1em;
       grid-template-areas:
         "name     email"
         "message  message"
