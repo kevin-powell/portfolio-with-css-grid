@@ -29,7 +29,7 @@
   .about-me {
     display: grid;
     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
-    grid-column-gap: .5em;
+    column-gap: .5em;
   }
 
   .about-img {
